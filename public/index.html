@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Choose a date to see how many near-Earth asteroids NASA lists for that day."
+    />
+    <meta name="theme-color" content="#080d1f" />
+    <link href="src/styles.css" rel="stylesheet" />
+    <title>Asteroid Watch Desk</title>
+  </head>
+  <body>
+    <main class="main-card">
+      <header>
+        <h1>Asteroid Watch Desk</h1>
+      </header>
+      <form>
+        <label for="date" class="date-label">Please select a date:</label>
+        <input type="date" id="date" class="date" />
+        <button type="submit" id="submit-button" class="submit-button">
+          Search the skies
+        </button>
+      </form>
+      <section class="output" id="output" hidden>
+        <h2>What's passing by?</h2>
+        <p class="response-message" id="response-message"></p>
+        <footer class="observation-note" id="observation-note" hidden>
+          <p>
+            NASA describes an asteroid as a rocky object larger than about 1m.
+            These objects vary in size and passing distance. A close approach
+            does not mean an impact is expected.
+            <a
+              href="https://science.nasa.gov/universe/glossary/"
+              target="_blank"
+              rel="noopener"
+              >NASA asteroid glossary</a
+            >
+          </p>
+        </footer>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.21.0/dist/axios.min.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
